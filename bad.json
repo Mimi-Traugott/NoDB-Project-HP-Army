@@ -1,0 +1,92 @@
+[
+  {
+    "id": 11,
+    "name":"Draco Malfoy",
+    "house":"Slytherin",
+    "special-ability": "Arrogance",
+    "patronus": "none",
+    "catch-phrase": "My Father Will Hear About This!",
+    "image":"http://hp-api.herokuapp.com/images/draco.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Gregory Goyle",
+    "house": "Slytherin",
+    "special-ability": "Long Gorilla Arms",
+    "patronus": "none",
+    "catch-phrase": "Wait Up Draco!",
+    "image": "http://hp-api.herokuapp.com/images/goyle.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Vincent Crabbe",
+    "house": "Slytherin",
+    "special-ability": "Gluttony",
+    "patronus": "none",
+    "catch-phrase": "Look, Food!",
+    "image": "http://hp-api.herokuapp.com/images/crabbe.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Dolores Umbridge",
+    "house": "Slytherin",
+    "special-ability": "Torture",
+    "patronus": "Persian Cat",
+    "catch-phrase": "I Will Have Order!",
+    "image": "http://hp-api.herokuapp.com/images/umbridge.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Lucius Malfoy",
+    "house": "Slytherin",
+    "special-ability": "Kissing Ass",
+    "patronus": "none",
+    "catch-phrase": "You've Lost Me My Servant!",
+    "image": "http://hp-api.herokuapp.com/images/lucius.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Lord Voldemort",
+    "house": "Slytherin",
+    "special-ability": "Hairlessness",
+    "patronus": "none",
+    "catch-phrase": "Avada Kedavra!",
+    "image": "http://hp-api.herokuapp.com/images/voldemort.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Bellatrix Lestrange",
+    "house": "Slytherin",
+    "special-ability": "Killing Family Members",
+    "patronus": "none",
+    "catch-phrase": "I Killed Sirius Black!",
+    "image": "http://hp-api.herokuapp.com/images/bellatrix.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Nagini",
+    "house": "none",
+    "special-ability": "Eating People",
+    "patronus": "none",
+    "catch-phrase": "Hissss!",
+    "image": "https://vignette.wikia.nocookie.net/harrypotter/images/2/2f/Nagini.jpg/revision/latest?cb=20111016153949"
+  },
+  {
+    "id": 19,
+    "name": "Dementor",
+    "house": "none",
+    "special-ability": "Sucking Souls",
+    "patronus": "none",
+    "catch-phrase": "Whoooooo",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrOuOCW1Tht7e3xTWItt5gqNpb2RbEB-GYvCJGfdpXJeJkloBJPQ&s"
+  },
+  {
+    "id": 20,
+    "name": "Barty Crouch Jr.",
+    "house": "Slytherin",
+    "special-ability": "Craziness",
+    "patronus": "none",
+    "catch-phrase": "I'll Show You Mine If You Show Me Yours?",
+    "image": "https://iv1.lisimg.com/image/16737547/534full-barty-crouch-jr..jpg"
+  }
+]

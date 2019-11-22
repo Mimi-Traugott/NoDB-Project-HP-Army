@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Harry Potter",
+    "house": "Gryffindor",
+    "special-ability": "Bravery",
+    "patronus": "Stag",
+    "catch-phrase": "Expecto Patronum!",
+    "image": "http://hp-api.herokuapp.com/images/harry.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Hermione Granger",
+    "house": "Gryffindor",
+    "special-ability": "Intelligence",
+    "patronus": "Otter",
+    "catch-phrase": "It's LeviOsa, Not LevioSA!",
+    "image": "http://hp-api.herokuapp.com/images/hermione.jpeg"
+  },
+  {
+    "id": 3,
+    "name": "Ron Weasley",
+    "house": "Gryffindor",
+    "special-ability": "Friendship",
+    "patronus": "Jack Russell Terrier",
+    "catch-phrase": "I'm Ron Weasley.",
+    "image": "http://hp-api.herokuapp.com/images/ron.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Minerva McGonagall",
+    "house": "Gryffindor",
+    "special-ability": "Transfiguration",
+    "patronus": "Tabby Cat",
+    "catch-phrase": "We Teachers Are Rather Good At Magic, You Know.",
+    "image": "http://hp-api.herokuapp.com/images/mcgonagall.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Severus Snape",
+    "house": "Slytherin",
+    "special-ability": "Love",
+    "patronus": "Doe",
+    "catch-phrase": "Always.",
+    "image": "http://hp-api.herokuapp.com/images/snape.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Rubeus Hagrid",
+    "house": "Gryffindor",
+    "special-ability": "Animal Whisperer",
+    "patronus": "none",
+    "catch-phrase": "Never Insult Albus Dumbledore In Front Of Me!",
+    "image": "http://hp-api.herokuapp.com/images/hagrid.png"
+  },
+  {
+    "id": 7,
+    "name": "Neville Longbottom",
+    "house": "Gryffindor",
+    "special-ability": "Courage",
+    "patronus": "Non-Corporeal",
+    "catch-phrase": "Why Is It Always Me?",
+    "image": "http://hp-api.herokuapp.com/images/neville.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Ginny Weasley",
+    "house": "Gryffindor",
+    "special-ability": "Being Harry's Girlfriend",
+    "patronus": "Horse",
+    "catch-phrase": "That Can Stay Up Here Too if You'd Like.",
+    "image": "http://hp-api.herokuapp.com/images/ginny.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Sirius Black",
+    "house": "Gryffindor",
+    "special-ability": "Loyalty",
+    "patronus": "Black Dog",
+    "catch-phrase": "What's Life Without A Little Risk?",
+    "image": "http://hp-api.herokuapp.com/images/sirius.JPG"
+  },
+  {
+    "id": 10,
+    "name": "Albus Dumbledore",
+    "house": "Gryffindor",
+    "special-ability": "Badassness",
+    "patronus": "Phoenix",
+    "catch-phrase": "It Does Not Do To Dwell On Dreams And Forget To Live.",
+    "image": "https://vignette.wikia.nocookie.net/harrypotter/images/4/40/Albus_Dumbledore_%28HBP_promo%29_3.jpg/revision/latest/scale-to-width-down/2000?cb=20150822232849"
+  }
+]

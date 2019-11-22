@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+// import Army from './Components/Army';
+// import ArmyMember from './Components/ArmyMember';
+import CardContainer from './Components/CardContainer';
+// import CharacterInfo from './Components/CharacterInfo'
+import Header from './Components/Header';
+// import axios from 'axios'
 
-function App() {
+class App extends Component {
+  constructor(){
+    super()
+    this.state = {
+      army: []
+    }
+  }
+
+
+  
+  render(){
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CardContainer/>
+      <Header/>
+
+   
     </div>
   );
+}
 }
 
 export default App;
