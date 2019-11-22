@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-function BadWizard(props){
+function BadWizards(props){
     return(
         <div>
             <p>{props.badGuys.name}</p>
@@ -13,4 +13,4 @@ function BadWizard(props){
        </div>
     )
 }
-export default BadWizard
+export default BadWizards
