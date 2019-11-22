@@ -13,10 +13,12 @@ class App extends Component {
       army: []
     }
   }
+  
   componentDidMount(){
     this.getGoodWizards()
     this.getBadWizards()
   } 
+
   getGoodWizards = () => {
     axios.get('/api/goodCharacters').then(res => {
       this.setState({
@@ -24,10 +26,27 @@ class App extends Component {
       })
     })
   }
+
   getBadWizards = () => { 
     axios.get('/api/badCharacters').then(res => {
      this.setState({
         badArr: res.data
+      })
+    })
+  }
+
+  addToArmy = () => {
+    axios.post('/api/addToArmy').then(res => {
+      this.setState({
+        army: res.data
+      })
+    })
+  }
+
+  killWizard = () => {
+    axios.delete('/api/killWizard').then(res => {
+      this.setState({
+        army: res.data
       })
     })
   }

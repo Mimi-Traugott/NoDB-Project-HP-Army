@@ -26,6 +26,12 @@ module.exports = {
         }
         army.push(wizObj)
         res.status(200).send(army)
-    }
+    },
+    killWizard: (req, res) => {
+        const {id} = req.params
+        const index = army.findIndex(element => element.id === +id)
+        army.splice(index, 1);
+        res.status(200).send(army)
+    },
 }
 

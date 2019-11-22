@@ -9,9 +9,8 @@ app.use(express.json())
 //Endpoints to aquire 
 app.get('/api/badCharacters', characterCtrl.getAllBad)
 app.get('/api/goodCharacters', characterCtrl.getAllGood)
-
 app.post('/api/addToArmy', characterCtrl.addToArmy)
-
+app.delete('/api/killWizard', characterCtrl.killWizard)
 
 
 
