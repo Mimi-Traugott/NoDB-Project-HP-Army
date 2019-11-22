@@ -5,39 +5,23 @@ import axios from 'axios';
 
 
 class CardContainer extends Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
+
         this.state = {
-            goodArr: [],
-            badArr: []
+            currentIndex: 0
         }
+        this.handleCharacterChange = this.handleCharacterChange.bind(this)
     }
-    componentDidMount(){
-        this.getGoodWizards()
-        this.getBadWizards()
-    }
-    getGoodWizards = () => {
-        axios.get('/api/goodCharacters').then(res => {
-            this.setState({
-                goodArr: res.data
-            })
-        })
-    }
-    getBadWizards = () => { 
-        axios.get('/api/badCharacters').then(res => {
-            this.setState({
-                badArr: res.data
-            })
-        })
+    handleCharacterChange(){
+        this.SetState({currentIndex: this.state.currentIndex+1})
     }
 
     render(){
-        console.log(this.state.goodArr)
-        console.log(this.state.badArr)
         return(
             <div>
-                <GoodWizards />
-                <BadWizards />
+                <GoodWizards goodGuys={this.props.wizards[this.state.currentIndex]}/>
+                <BadWizards badGuys={this.props.wizards[this.state.currentIndex]}/>
 
             </div>
         )

@@ -1,27 +1,46 @@
 import React, {Component} from 'react';
 import './App.css';
-// import Army from './Components/Army';
-// import ArmyMember from './Components/ArmyMember';
 import CardContainer from './Components/CardContainer';
-// import CharacterInfo from './Components/CharacterInfo'
 import Header from './Components/Header';
-// import axios from 'axios'
+import axios from 'axios'
 
 class App extends Component {
   constructor(){
     super()
     this.state = {
+      goodArr: [],
+      badArr: [],
       army: []
     }
   }
+  componentDidMount(){
+    this.getGoodWizards()
+    this.getBadWizards()
+  } 
 
+  getGoodWizards = () => {
+    axios.get('/api/goodCharacters').then(res => {
+      this.setState({
+        goodArr: res.data
+      })
+  })
+}
 
-  
+  getBadWizards = () => { 
+    axios.get('/api/badCharacters').then(res => {
+     this.setState({
+        badArr: res.data
+    })
+  })
+}
+
   render(){
+    console.log(this.state)
   return (
     <div className="App">
-      <CardContainer/>
       <Header/>
+      <CardContainer wizards={this.state.goodArr}/>
+      <CardContainer wizards={this.state.badArr}/>
 
    
     </div>

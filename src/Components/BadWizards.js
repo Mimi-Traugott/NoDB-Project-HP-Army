@@ -1,17 +1,16 @@
 import React, {Component} from 'react'
 
-class BadWizard extends Component {
-    constructor(){
-        super()
+function BadWizard(props){
+    return(
+        <div>
+            <p>{props.badGuys.name}</p>
+            <p>{props.badGuys.house}</p>
+            <p>{props.badGuys.specialability}</p>
+            <p>{props.badGuys.house.patrons}</p>
+            <p>{props.badGuys.house.catchphrase}</p>
+            <p>{props.badGuys.image}</p>
 
-    }
-
-    render(){
-        return(
-            <div>
-
-            </div>
-        )
-    }
+       </div>
+    )
 }
 export default BadWizard
