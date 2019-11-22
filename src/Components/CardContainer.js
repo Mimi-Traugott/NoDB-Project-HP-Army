@@ -11,21 +11,16 @@ class CardContainer extends Component {
         this.state = {
             currentIndex: 0
         }
-        this.handleCharacterChange = this.handleCharacterChange.bind(this)
-    }
-    handleCharacterChange(){
-        this.SetState({currentIndex: this.state.currentIndex+1})
     }
 
-    render(){
+    render() {
         return(
             <div>
                 <GoodWizards goodGuys={this.props.wizards[this.state.currentIndex]}/>
                 <BadWizards badGuys={this.props.wizards[this.state.currentIndex]}/>
-
             </div>
         )
     }
-
 }
+
 export default CardContainer;
