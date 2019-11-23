@@ -3,6 +3,7 @@ import React from 'react'
 function Card (props){
 
     return (
+        
         <div onClick={props.onSelect&&props.onSelect}>
             <p>{props.wizard.name}</p>
             <p>{props.wizard.house}</p>

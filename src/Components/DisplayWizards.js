@@ -12,8 +12,8 @@ class DisplayWizards extends Component {
     render(){
         return (
             <div className="App">
-                <CardContainer badWizards={this.props.badWizards} />
-                <CardContainer goodWizards={this.props.goodWizards} />
+                <CardContainer wizards={this.props.badWizards} />
+                <CardContainer wizards={this.props.goodWizards} />
             </div>
         )
     }

@@ -17,18 +17,21 @@ class App extends Component {
   componentDidMount(){
     this.getGoodWizards()
     this.getBadWizards()
+    // console.log(this.state)
   } 
 
   getGoodWizards = (body) => {
-    axios.get('http://localhost:4041/api/goodWizards', body).then(res => {
+    axios.get('/api/goodWizards').then(res => {
       this.setState({
         goodArr: res.data
       })
+      // console.log(res.data)
+      // console.log(this.state.goodArr)
     })
   }
 
   getBadWizards = (body) => { 
-    axios.get('http://localhost:4041/api/badWizards', body).then(res => {
+    axios.get('http://localhost:4041/api/badWizards').then(res => {
      this.setState({
         badArr: res.data
       })
@@ -56,8 +59,8 @@ class App extends Component {
     <div className="App">
       <Header/>
       <DisplayWizards 
-      badWizards={this.getBadWizards}
-      goodWizards={this.getGoodWizards}
+      badWizards={this.state.badArr}
+      goodWizards={this.state.goodArr}
       />
     </div>
   );
