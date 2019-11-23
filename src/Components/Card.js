@@ -4,7 +4,7 @@ function Card (props){
 
     return (
         
-        <div onClick={props.onSelect&&props.onSelect}>
+        <div onClick={props.handleCardChange&&props.handleCardChange}>
             <p>{props.wizard.name}</p>
             <p>{props.wizard.house}</p>
             {props.wizard.patronus!=="none"&&<p>{props.wizard.patronus}</p>}

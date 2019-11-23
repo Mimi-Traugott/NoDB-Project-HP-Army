@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import Card from './Card'
+import Button from './Button'
+
 
 class CardContainer extends Component {
     constructor(props){
@@ -16,8 +18,18 @@ class CardContainer extends Component {
     render() {
         return(
             <div>
-                {this.props.wizards.map((element, index) => { return (
-                <Card wizard={this.props.wizards[this.state.currentWizardIndex]}/>)})}
+                <Card wizard={this.props.wizards[this.state.currentWizardIndex]}/>
+                <Button handleCardChange={this._handleCardChange}/>
+
+
+                {/* {this.props.wizards.map((element, index) => { return (
+                <Card wizard={this.props.wizards[this.state.currentWizardIndex]}/>)})} */}
+                {/* {this.props.wizards.filter((element, index)=> 
+                    element[index] === this.state.currentWizardIndex
+                    .map(element =>
+                        <Card wizard={element} />
+                    ))} */}
+                        
                 {/* // <button handleCardChange={this._handleCardChange}>test</button>
             //    <p>hi</p> */}
             </div>
