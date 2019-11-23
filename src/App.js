@@ -1,14 +1,16 @@
 import React, {Component} from 'react';
 import './App.css';
-import CardContainer from './Components/CardContainer';
 import Header from './Components/Header';
+import DisplayWizards from "./Components/DisplayWizards";
 import axios from 'axios'
 
 class App extends Component {
   constructor(){
     super()
     this.state = {
-      allWizards = []
+      goodArr: [],
+      badArr: [],
+      army: []
     }
   }
 
@@ -17,32 +19,32 @@ class App extends Component {
     this.getBadWizards()
   } 
 
-  getGoodWizards = () => {
-    axios.get('/api/goodCharacters').then(res => {
+  getGoodWizards = (body) => {
+    axios.get('http://localhost:4041/api/goodWizards', body).then(res => {
       this.setState({
         goodArr: res.data
       })
     })
   }
 
-  getBadWizards = () => { 
-    axios.get('/api/badCharacters').then(res => {
+  getBadWizards = (body) => { 
+    axios.get('http://localhost:4041/api/badWizards', body).then(res => {
      this.setState({
         badArr: res.data
       })
     })
   }
 
-  addToArmy = () => {
-    axios.post('/api/addToArmy').then(res => {
+  addToArmy = (id, body) => {
+    axios.post(`http://localhost:4041/api/addToArmy/${id}`,body).then(res => {
       this.setState({
         army: res.data
       })
     })
   }
 
-  killWizard = () => {
-    axios.delete('/api/killWizard').then(res => {
+  killWizard = (id) => {
+    axios.delete(`http://localhost:4041/api/killWizard/${id}`).then(res => {
       this.setState({
         army: res.data
       })
@@ -53,8 +55,10 @@ class App extends Component {
   return (
     <div className="App">
       <Header/>
-      <CardContainer wizards={this.state.goodArr}/>
-      <CardContainer wizards={this.state.badArr}/>
+      <DisplayWizards 
+      badWizards={this.getBadWizards}
+      goodWizards={this.getGoodWizards}
+      />
     </div>
   );
 }

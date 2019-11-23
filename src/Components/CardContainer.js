@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
-import axios from 'axios';
-
+import Card from './Card'
 
 class CardContainer extends Component {
     constructor(props){
@@ -13,7 +12,8 @@ class CardContainer extends Component {
     render() {
         return(
             <div>
-               
+                <Card wizard/>
+               <p>hi</p>
             </div>
         )
     }

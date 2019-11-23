@@ -5,7 +5,6 @@ const axios = require('axios')
 const army = [];
 let id = 0;
 
-
 module.exports = {
     
     getAllBad: (req, res) => {
