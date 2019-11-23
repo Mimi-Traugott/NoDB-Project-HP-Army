@@ -8,12 +8,10 @@ class App extends Component {
   constructor(){
     super()
     this.state = {
-      goodArr: [],
-      badArr: [],
-      army: []
+      allWizards = []
     }
   }
-  
+
   componentDidMount(){
     this.getGoodWizards()
     this.getBadWizards()
