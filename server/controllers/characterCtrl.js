@@ -2,7 +2,10 @@ const good = require('../../good.json')
 const bad = require('../../bad.json')
 const axios = require('axios')
 
-const army = [];
+var army = {
+    name: "",
+    wizArr:[]
+};
 let id = 0;
 
 module.exports = {
@@ -23,11 +26,21 @@ module.exports = {
             catch_phrase: req.body.catch_phrase,
             image: req.body.image
         }
-        army.push(wizObj)
+        army.wizArr.push(wizObj)
         console.log('addtoarmy', army)
         res.status(200).send(army)
     },
-    
+    nameArmy: (req, res, next) => {
+        let {nameOfArmy} = req.body
+        console.log(req.body)
+        army.name = nameOfArmy
+        res.status(200).send(army)
+    },
+    updateArmyName: (req, res) => {
+        let {nameOfArmy} = req.body
+        army.name = nameOfArmy
+        res.status(200).send(army.name)
+    },
 
     getArmy: (req, res) => {
         res.status(200).send(army)

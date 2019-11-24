@@ -3,10 +3,10 @@
     "id": 1,
     "name": "Harry Potter",
     "house": "Gryffindor",
-    "special_ability": "Bravery",
+    "special_ability": "Defeating Voldemort",
     "patronus": "Stag",
     "catch_phrase": "Expecto Patronum!",
-    "image": "http://hp-api.herokuapp.com/images/harry.jpg"
+    "image": "http://jakespot.co.za/wp-content/uploads/2018/05/Harry-Potter6.jpg"
   },
   {
     "id": 2,
@@ -28,7 +28,7 @@
   },
   {
     "id": 4,
-    "name": "Minerva McGonagall",
+    "name": "Ms. McGonagall",
     "house": "Gryffindor",
     "special_ability": "Transfiguration",
     "patronus": "Tabby Cat",
@@ -39,7 +39,7 @@
     "id": 5,
     "name": "Severus Snape",
     "house": "Slytherin",
-    "special_ability": "Love",
+    "special_ability": "Potions Master",
     "patronus": "Doe",
     "catch_phrase": "Always.",
     "image": "http://hp-api.herokuapp.com/images/snape.jpg"
@@ -75,7 +75,7 @@
     "id": 9,
     "name": "Sirius Black",
     "house": "Gryffindor",
-    "special_ability": "Loyalty",
+    "special_ability": "Loyalty and Friendship",
     "patronus": "Black Dog",
     "catch_phrase": "What's Life Without A Little Risk?",
     "image": "http://hp-api.herokuapp.com/images/sirius.JPG"

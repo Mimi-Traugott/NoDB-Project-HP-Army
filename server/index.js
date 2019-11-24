@@ -15,6 +15,9 @@ app.get("/api/goodWizards", characterCtrl.getAllGood);
 app.post("/api/addToArmy", characterCtrl.addToArmy);
 app.get("/api/getArmy", characterCtrl.getArmy);
 
+app.post('/api/nameArmy', characterCtrl.nameArmy);
+app.put('/api/updateArmyName', characterCtrl.updateArmyName);
+
 app.delete("/api/killWizard", characterCtrl.killWizard);
 
 app.listen(PORT, () => {
