@@ -21,7 +21,7 @@ class App extends Component {
   } 
 
   getGoodWizards = (body) => {
-    axios.get('/api/goodWizards').then(res => {
+    axios.get('/api/goodWizards', body).then(res => {
       this.setState({
         goodArr: res.data
       })
@@ -31,7 +31,7 @@ class App extends Component {
   }
 
   getBadWizards = (body) => { 
-    axios.get('http://localhost:4041/api/badWizards').then(res => {
+    axios.get('http://localhost:4041/api/badWizards', body).then(res => {
      this.setState({
         badArr: res.data
       })

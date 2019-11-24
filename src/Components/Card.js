@@ -1,10 +1,9 @@
 import React from 'react'
 
-function Card (props){
+const Card = (props) => {
 
     return (
-        
-        <div onClick={props.handleCardChange&&props.handleCardChange}>
+        <div className = 'cards'>
             <p>{props.wizard.name}</p>
             <p>{props.wizard.house}</p>
             {props.wizard.patronus!=="none"&&<p>{props.wizard.patronus}</p>}
