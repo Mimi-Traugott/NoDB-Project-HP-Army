@@ -1,10 +1,59 @@
 .App {
-  text-align: center;
+  text-align: center; 
+  width: 100%;
+  height: 100vh;
+  display: flex; 
+  justify-content: center;
+  align-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://www.pinclipart.com/picdir/middle/93-936976_hogwarts-harrypotterworld-harry-potter-symbol-harrypott-hogwarts-crest.png");
 }
 
-#Header {
-  background-color: slategray;
-  height: 20px;
+.header {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-top: 15px;
+  font-family: cursive;
+  font-weight: bolder;
+  font-size: 30px;
+  height: 40px;
   width: 100%;
 }
+.displayWizard {
+  display: flex; 
+  background-color: white;
+}
+
+.wizard {
+  border: 2px solid black;
+  box-sizing: border-box;
+  width: 400px;
+  height: 440px;
+}
+.cards {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: larger;
+  padding-top: 0; 
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 0;
+}
+img {
+  height: 200px;
+  width: 150px;
+  margin: 0 auto;
+  border: 8px solid black;
+}
+
+button {
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  border-radius: 3px;
+  opacity: 0.8;
+}
+button:hover {opacity: 1}
 

@@ -24,8 +24,15 @@ module.exports = {
             image: req.body.image
         }
         army.push(wizObj)
+        console.log('addtoarmy', army)
         res.status(200).send(army)
     },
+    
+
+    getArmy: (req, res) => {
+        res.status(200).send(army)
+    },
+
     killWizard: (req, res) => {
         const {id} = req.params
         const index = army.findIndex(element => element.id === +id)

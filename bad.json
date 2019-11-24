@@ -12,7 +12,7 @@
     "id": 12,
     "name": "Gregory Goyle",
     "house": "Slytherin",
-    "special_ability": "Long Gorilla Arms",
+    "special_ability": "Gorilla Arms",
     "patronus": "none",
     "catch_phrase": "Wait Up Draco!",
     "image": "http://hp-api.herokuapp.com/images/goyle.jpg"

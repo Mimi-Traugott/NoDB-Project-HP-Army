@@ -9,7 +9,6 @@ class CardContainer extends Component {
         this.state = {
            currentWizardIndex: 0
         }
-
         this._handleCardChange = this._handleCardChange.bind(this)
     }
 
@@ -17,23 +16,15 @@ class CardContainer extends Component {
         this.setState({
             currentWizardIndex: this.state.currentWizardIndex+1
         })
+        this.props.addToArmy(this.props.wizards[this.state.currentWizardIndex])
     }
     render() {
+        console.log('card container wiz', this.props.wizards)
+        console.log('card container current wix index',this.state.currentWizardIndex)
         return(
-            <div>
+            <div className='wizard'>
                 <Card wizard={this.props.wizards[this.state.currentWizardIndex]}/>
                 <Button handleCardChange={this._handleCardChange}/>
-
-                {/* {this.props.wizards.map((element, index) => { return (
-                <Card wizard={this.props.wizards[this.state.currentWizardIndex]}/>)})} */}
-                {/* {this.props.wizards.filter((element, index)=> 
-                    element[index] === this.state.currentWizardIndex
-                    .map(element =>
-                        <Card wizard={element} />
-                    ))} */}
-                        
-                {/* // <button handleCardChange={this._handleCardChange}>test</button>
-            //    <p>hi</p> */}
             </div>
         )
     }

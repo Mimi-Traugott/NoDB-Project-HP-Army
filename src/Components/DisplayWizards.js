@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import CardContainer from './CardContainer'
+import Army from './Army'
 
 class DisplayWizards extends Component {
     constructor(props){
@@ -10,10 +11,18 @@ class DisplayWizards extends Component {
     }
 
     render(){
+        console.log(this.props)
         return (
-            <div className="App">
-                <CardContainer wizards={this.props.badWizards} />
-                <CardContainer wizards={this.props.goodWizards} />
+            <div>
+                <div className="displayWizard">
+                <CardContainer wizards={this.props.badWizards}
+                addToArmy={this.props.addToArmy} />
+                <CardContainer wizards={this.props.goodWizards}
+                addToArmy={this.props.addToArmy} />
+                </div>
+                <div>
+                <Army army={this.props.army}/>
+                </div>
             </div>
         )
     }
