@@ -17,8 +17,8 @@ export default class Army extends Component {
                 updatedArmyName :res.data
             }
         ))
-
     }
+    
     render (){   
         console.log('army', this.props)  
     return (
