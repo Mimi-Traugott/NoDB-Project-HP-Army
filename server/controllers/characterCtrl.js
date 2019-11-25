@@ -5,11 +5,10 @@ const axios = require('axios')
 var army = {
     name: "",
     wizArr:[]
-};
-let id = 0;
+}
+let id = 0
 
 module.exports = {
-    
     getAllBad: (req, res) => {
         res.status(200).send(bad)
     },
@@ -42,11 +41,9 @@ module.exports = {
         army.name = nameOfArmy
         res.status(200).send(army.name)
     },
-
     getArmy: (req, res) => {
         res.status(200).send(army)
     },
-
     killWizard: (req, res) => {
         const {id} = req.params
         console.log('going to delete', id)

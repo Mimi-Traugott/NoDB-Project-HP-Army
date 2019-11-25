@@ -20,7 +20,6 @@ class App extends Component {
     this.getGoodWizards();
     this.getBadWizards();
     this.getArmy();
-    console.log("mounting", this.state);
   }
 
   getGoodWizards = body => {
@@ -28,8 +27,6 @@ class App extends Component {
       this.setState({
         goodArr: res.data
       });
-      console.log("get good wizards", res.data);
-      console.log("get good wiz arr", this.state.goodArr);
     });
   };
 
@@ -42,7 +39,7 @@ class App extends Component {
   };
 
   addToArmy = wizard => {
-    axios.post(`/api/addToArmy`, wizard).then(res => {
+    axios.post(`/api/myArmy`, wizard).then(res => {
       this.setState({
         army: res.data
       });
@@ -50,15 +47,13 @@ class App extends Component {
   };
 
   nameArmy = nameOfArmy => {
-    axios.post(`/api/nameArmy`, {nameOfArmy}).then(res =>{
-      console.log('nameArmyTest', res.data)
+    axios.post(`/api/firstArmyName`, {nameOfArmy}).then(res =>{
       this.setState({army:res.data})
     })
-
   }
 
   getArmy = body => {
-    axios.get("/api/getArmy", body).then(res => {
+    axios.get("/api/allArmy", body).then(res => {
       this.setState({
         army: res.data
       });
@@ -66,8 +61,7 @@ class App extends Component {
   };
 
   killWizard = id => {
-    console.log('deletewiz', id)
-    axios.delete(`/api/killWizard/${id}`).then(res => {
+    axios.delete(`/api/avadakedavra/${id}`).then(res => {
       this.setState({
         army: res.data
       });
@@ -84,8 +78,6 @@ class App extends Component {
   }
 
   render() {
-    console.log("app.render", this.state);
-
     return (
       <div className="backApp">
         <Header />
@@ -107,6 +99,5 @@ class App extends Component {
       </div>
     );
   }
-
 }
 export default App;

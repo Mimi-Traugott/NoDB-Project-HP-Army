@@ -6,18 +6,17 @@ class DisplayWizards extends Component {
     constructor(props){
         super(props)
         this.state = {
-
         }
     }
-
     render(){
-        console.log(this.props)
         return (
             <div>
                 <div className="displayWizard">
-                <CardContainer wizards={this.props.badWizards}
+                <CardContainer 
+                wizards={this.props.badWizards}
                 addToArmy={this.props.addToArmy} />
-                <CardContainer wizards={this.props.goodWizards}
+                <CardContainer 
+                wizards={this.props.goodWizards}
                 addToArmy={this.props.addToArmy} />
                 </div>
                 <div>

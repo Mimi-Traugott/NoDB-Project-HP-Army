@@ -24,8 +24,6 @@ class CardContainer extends Component {
         })
     }
     render() {
-        console.log('card container wiz', this.props.wizards)
-        console.log('card container current wix index',this.state.currentWizardIndex)
         return(
             <div className='wizard'>
                 <Card wizard={this.props.wizards[this.state.currentWizardIndex]}/>

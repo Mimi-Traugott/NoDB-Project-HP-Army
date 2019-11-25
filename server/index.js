@@ -13,13 +13,13 @@ app.use(express.json());
 app.get("/api/badWizards", characterCtrl.getAllBad);
 app.get("/api/goodWizards", characterCtrl.getAllGood);
 
-app.post("/api/addToArmy", characterCtrl.addToArmy);
-app.get("/api/getArmy", characterCtrl.getArmy);
+app.post("/api/myArmy", characterCtrl.addToArmy);
+app.get("/api/allArmy", characterCtrl.getArmy);
 
-app.post('/api/nameArmy', characterCtrl.nameArmy);
-app.put('/api/updateArmyName', characterCtrl.updateArmyName);
+app.post('/api/firstArmyName', characterCtrl.nameArmy);
+app.put('/api/yourArmyName', characterCtrl.updateArmyName);
 
-app.delete("/api/killWizard/:id", characterCtrl.killWizard);
+app.delete("/api/avadakedavra/:id", characterCtrl.killWizard);
 
-app.listen(PORT, () => console.log(gradient.rainbow(`runnin running, we're runnin runnin on ${PORT}`)))
+app.listen(PORT, () => console.log(gradient.rainbow(`runnin wild on ${PORT}`)))
 
