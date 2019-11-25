@@ -3,7 +3,6 @@ import "./App.css";
 import Header from "./Components/Header";
 import DisplayWizards from "./Components/DisplayWizards";
 import NameYourArmy from "./Components/NameYourArmy";
-
 import axios from "axios";
 
 class App extends Component {
