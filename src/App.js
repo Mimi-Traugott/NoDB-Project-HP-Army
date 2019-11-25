@@ -27,7 +27,7 @@ class App extends Component {
       this.setState({
         goodArr: res.data
       });
-    });
+    }).catch(err => console.log(err))
   };
 
   getBadWizards = body => {
@@ -35,7 +35,7 @@ class App extends Component {
       this.setState({
         badArr: res.data
       });
-    });
+    }).catch(err => console.log(err))
   };
 
   addToArmy = wizard => {
@@ -65,7 +65,7 @@ class App extends Component {
       this.setState({
         army: res.data
       });
-    });
+    }).catch(err => console.log(err))
   };
 
   handleInputChange(evt) {
