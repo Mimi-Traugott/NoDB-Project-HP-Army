@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./Components/Header";
 import DisplayWizards from "./Components/DisplayWizards";
 import NameYourArmy from "./Components/NameYourArmy";
+
 import axios from "axios";
 
 class App extends Component {
@@ -16,6 +17,11 @@ class App extends Component {
   }
 
   componentDidMount() {
+
+    const audioEl = document.getElementsByClassName("audio-element")[0]
+    audioEl.play()
+
+
     this.getGoodWizards();
     this.getBadWizards();
     this.getArmy();
@@ -95,6 +101,9 @@ class App extends Component {
           addToArmy={this.addToArmy}
           killWizard={this.killWizard}
         />
+         <audio className="audio-element">
+          <source src="https://ia800805.us.archive.org/4/items/11TheQuidditchMatch/2001%20-%20Harry%20Potter%20and%20The%20Sorcerer%27s%20Stone/01%20-%20Prologue.mp3"></source>
+        </audio>
       </div>
     );
   }

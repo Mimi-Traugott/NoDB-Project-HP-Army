@@ -26,18 +26,15 @@ module.exports = {
             image: req.body.image
         }
         army.wizArr.push(wizObj)
-        console.log('addtoarmy', army)
         res.status(200).send(army)
     },
     nameArmy: (req, res, next) => {
         let {nameOfArmy} = req.body
-        console.log(req.body)
         army.name = nameOfArmy
         res.status(200).send(army)
     },
     updateArmyName: (req, res) => {
         let {nameOfArmy} = req.body
-        console.log('test update', nameOfArmy)
         army.name = nameOfArmy
         res.status(200).send(army.name)
     },
@@ -46,7 +43,6 @@ module.exports = {
     },
     killWizard: (req, res) => {
         const {id} = req.params
-        console.log('going to delete', id)
         const index = army.wizArr.findIndex(element => element.id === +id)
         army.wizArr.splice(index, 1);
         res.status(200).send(army)
