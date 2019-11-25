@@ -2,7 +2,7 @@ import React from 'react'
 
 function Header (){
     return (
-        <div className='header'> ASSEMBLE YOUR ARMY ⌁☍ </div>
+        <header className='header'>ASSEMBLE YOUR ARMY ⌁☍ </header>
     )
 }
 export default Header;

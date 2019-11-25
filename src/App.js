@@ -12,8 +12,7 @@ class App extends Component {
     this.state = {
       goodArr: [],
       badArr: [],
-      army: {},
-      armyName: ""
+      army: {name: ''},
     };
   }
 
@@ -52,8 +51,10 @@ class App extends Component {
 
   nameArmy = nameOfArmy => {
     axios.post(`/api/nameArmy`, {nameOfArmy}).then(res =>{
-      this.setState({armyName:res.data.army})
+      console.log('nameArmyTest', res.data)
+      this.setState({army:res.data})
     })
+
   }
 
   getArmy = body => {
@@ -65,6 +66,7 @@ class App extends Component {
   };
 
   killWizard = id => {
+    console.log('deletewiz', id)
     axios.delete(`/api/killWizard/${id}`).then(res => {
       this.setState({
         army: res.data
@@ -73,11 +75,11 @@ class App extends Component {
   };
 
   handleInputChange(evt) {
-    this.setState({armyName: evt.target.value })
+    this.setState({army:{...this.state.army, name: evt.target.value }})
   }
   handleKeyPress(evt) {
     if (evt.key === "Enter"){
-      this.nameArmy(this.state.armyName)
+      this.nameArmy(this.state.army.name)
     }
   }
 
@@ -100,10 +102,11 @@ class App extends Component {
           goodWizards={this.state.goodArr}
           army={this.state.army}
           addToArmy={this.addToArmy}
+          killWizard={this.killWizard}
         />
       </div>
     );
   }
-}
 
+}
 export default App;

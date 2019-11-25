@@ -10,7 +10,6 @@ export default class Army extends Component {
             editing: false
         }
     }
-
     updateArmyName = newName => {
         axios.put('/api/updateArmyName', newName).then(res =>
             this.setState({
@@ -18,15 +17,18 @@ export default class Army extends Component {
             }
         ))
     }
-    
     render (){   
         console.log('army', this.props)  
     return (
         <div className= 'army'>
-            <h1>Army</h1>
+            <h1>Army of {this.props.army.name}</h1>
             {/* {this.props.army.name ? this.props.army.name : <button onClick={}> </button>} <button>Change name</button> */}
             {this.props.army.wizArr && this.props.army.wizArr.map(el => (
-                    <div key={el.id}>{el.name}</div>) 
+                    <div key={el.id}>{el.name}
+                    &nbsp;&nbsp;<img className='deleteicon' src='https://img.icons8.com/cotton/2x/delete-sign--v2.png' alt ='' 
+                    onClick={()=>this.props.killWizard
+                    (el.id)}/>
+                    </div>) 
                     // <span onclick={delete}>X</span>
                 )}
         </div>

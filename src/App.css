@@ -37,7 +37,7 @@
 }
 .cards {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: larger;
+  font-size: 20px;
   padding-top: 0; 
   padding-left: 100px;
   padding-right: 100px;
@@ -57,7 +57,7 @@ img {
   height: 200px;
   width: 150px;
   margin: 0 auto;
-  border: 8px solid black;
+  /* border: 8px solid black; */
 }
 
 button {
@@ -68,4 +68,9 @@ button {
   opacity: 0.8;
 }
 button:hover {opacity: 1}
+
+.deleteicon {
+  height: 15px;
+  width: 15px;
+}
 

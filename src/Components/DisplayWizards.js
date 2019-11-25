@@ -21,7 +21,9 @@ class DisplayWizards extends Component {
                 addToArmy={this.props.addToArmy} />
                 </div>
                 <div>
-                <Army army={this.props.army}/>
+                <Army 
+                army={this.props.army}
+                killWizard={this.props.killWizard}/>
                 </div>
             </div>
         )

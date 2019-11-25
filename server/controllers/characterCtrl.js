@@ -38,6 +38,7 @@ module.exports = {
     },
     updateArmyName: (req, res) => {
         let {nameOfArmy} = req.body
+        console.log('test update', nameOfArmy)
         army.name = nameOfArmy
         res.status(200).send(army.name)
     },
@@ -48,8 +49,9 @@ module.exports = {
 
     killWizard: (req, res) => {
         const {id} = req.params
-        const index = army.findIndex(element => element.id === +id)
-        army.splice(index, 1);
+        console.log('going to delete', id)
+        const index = army.wizArr.findIndex(element => element.id === +id)
+        army.wizArr.splice(index, 1);
         res.status(200).send(army)
     },
 }

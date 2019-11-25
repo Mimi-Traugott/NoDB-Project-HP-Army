@@ -1,5 +1,6 @@
 const express = require("express");
 const characterCtrl = require("./controllers/characterCtrl");
+const gradient = require('gradient-string')
 const cors = require("cors");
 
 const PORT = 4041;
@@ -18,8 +19,7 @@ app.get("/api/getArmy", characterCtrl.getArmy);
 app.post('/api/nameArmy', characterCtrl.nameArmy);
 app.put('/api/updateArmyName', characterCtrl.updateArmyName);
 
-app.delete("/api/killWizard", characterCtrl.killWizard);
+app.delete("/api/killWizard/:id", characterCtrl.killWizard);
 
-app.listen(PORT, () => {
-  console.log(`runnin on ${PORT}`);
-});
+app.listen(PORT, () => console.log(gradient.rainbow(`runnin running, we're runnin runnin on ${PORT}`)))
+

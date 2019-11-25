@@ -2,7 +2,10 @@ import React from 'react'
 
 function Button (props){
     return(
-        <button onClick={props.handleCardChange}>Add To Your Army</button>
+        <div>
+        <button onClick={props.addToArmy}>Add To Your Army</button>
+        <button onClick={props.nextWizard}>Next</button>
+        </div>
     )
 }
 export default Button;
